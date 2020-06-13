@@ -44,7 +44,7 @@ const LoginScreen = (props) => {
                             mode="outlined"
                             style={styles.button}
                             labelStyle={styles.label}
-                            onPress={() => console.log('Pressed')}>
+                            onPress={() => navigation.navigate('MotoristaFirstAccess')}>
                             Acessar
                         </Button>
                         <Title style={[{ marginTop: 20 }, styles.title]}>Segundo acesso:</Title>
