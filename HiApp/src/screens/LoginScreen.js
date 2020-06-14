@@ -67,7 +67,7 @@ const LoginScreen = (props) => {
                             mode="outlined"
                             style={styles.button}
                             labelStyle={styles.label}
-                            onPress={() => console.log('Pressed')}>
+                            onPress={() => navigation.navigate('MotoristaHomeScreen')}>
                             Acessar
                         </Button>
 

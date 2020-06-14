@@ -7,7 +7,9 @@ import {
   SafeAreaView,
   StyleSheet,
   ImageBackground,
-  ScrollView
+  ScrollView,
+  TouchableHighlight,
+  Dimensions
 } from 'react-native';
 
 import {
@@ -22,44 +24,62 @@ import background from '../assets/imgs/background.png'
 
 import maik from '../assets/imgs/avatar.jpg'
 
+const ScreenHeight = Dimensions.get("window").height;
+
 const MotoristaFirstAccess = (props) => {
 
-  const { navigation } = props;
+  const { navigation, route } = props;
 
   return (
     <ScrollView style={{ width: '100%' }}>
       <SafeAreaView style={styles.container}>
-        <ImageBackground source={background} style={styles.image}>
+        <ImageBackground source={background} style={[{ height: (route.params && route.params.isSecond) ? ScreenHeight : 'auto' }, styles.image]}>
           <View style={styles.boxButton}>
-            <Calendar style={styles.calendar} />
-            <View style={styles.boxAvatar}>
-              <Avatar.Image size={54} source={maik} />
-              <View>
-                <Title style={styles.title}>Dr. Maik Vinícius</Title>
-                <Subheading style={styles.title}>Especialista em Terapia</Subheading>
-              </View>
-            </View>
-            <View style={styles.boxAvatar}>
-              <Avatar.Image size={54} source={maik} />
-              <View>
-                <Title style={styles.title}>Dr. Maik Vinícius</Title>
-                <Subheading style={styles.title}>Especialista em Terapia</Subheading>
-              </View>
-            </View>
-            <View style={styles.boxAvatar}>
-              <Avatar.Image size={54} source={maik} />
-              <View>
-                <Title style={styles.title}>Dr. Maik Vinícius</Title>
-                <Subheading style={styles.title}>Especialista em Terapia</Subheading>
-              </View>
-            </View>
-            <View style={styles.boxAvatar}>
-              <Avatar.Image size={54} source={maik} />
-              <View>
-                <Title style={styles.title}>Dr. Maik Vinícius</Title>
-                <Subheading style={styles.title}>Especialista em Terapia</Subheading>
-              </View>
-            </View>
+            <Calendar
+              onDayPress={(day) => navigation.navigate('MotoristaAgendaSucessoScreen')}
+              onDayChange={(day) => navigation.navigate('MotoristaAgendaSucessoScreen')}
+              style={styles.calendar} />
+            {route.params && route.params.isSecond ? (
+              <TouchableHighlight onPress={() => navigation.navigate('MotoristaAgendaSucessoScreen')}>
+                <View style={styles.boxAvatar}>
+                  <Avatar.Image size={54} source={maik} />
+                  <View>
+                    <Title style={styles.title}>Dr. Maik Vinícius</Title>
+                    <Subheading style={styles.title}>Especialista em Terapia</Subheading>
+                  </View>
+                </View>
+              </TouchableHighlight>
+            ) : (
+                <View>
+                  <TouchableHighlight onPress={() => navigation.navigate('MotoristaAgendaSucessoScreen')}>
+                    <View style={styles.boxAvatar}>
+                      <Avatar.Image size={54} source={maik} />
+                      <View>
+                        <Title style={styles.title}>Dr. Maik Vinícius</Title>
+                        <Subheading style={styles.title}>Especialista em Terapia</Subheading>
+                      </View>
+                    </View>
+                  </TouchableHighlight>
+                  <TouchableHighlight onPress={() => navigation.navigate('MotoristaAgendaSucessoScreen')}>
+                    <View style={styles.boxAvatar}>
+                      <Avatar.Image size={54} source={maik} />
+                      <View>
+                        <Title style={styles.title}>Dr. Maik Vinícius</Title>
+                        <Subheading style={styles.title}>Especialista em Terapia</Subheading>
+                      </View>
+                    </View>
+                  </TouchableHighlight>
+                  <TouchableHighlight onPress={() => navigation.navigate('MotoristaAgendaSucessoScreen')}>
+                    <View style={styles.boxAvatar}>
+                      <Avatar.Image size={54} source={maik} />
+                      <View>
+                        <Title style={styles.title}>Dr. Maik Vinícius</Title>
+                        <Subheading style={styles.title}>Especialista em Terapia</Subheading>
+                      </View>
+                    </View>
+                  </TouchableHighlight>
+                </View>
+              )}
           </View>
         </ImageBackground>
       </SafeAreaView>
