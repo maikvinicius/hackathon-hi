@@ -33,18 +33,11 @@ const LoginScreen = (props) => {
                 <View style={styles.boxButton}>
                     <ScrollView>
                         <Title style={styles.title}>Primeiro acesso:</Title>
-                        <TextInput
-                            label='CPF'
-                            value="123.123.123-12"
-                            mode="flat"
-                            style={styles.input}
-                            theme={theme}
-                        />
                         <Button
                             mode="outlined"
                             style={styles.button}
                             labelStyle={styles.label}
-                            onPress={() => navigation.navigate('MotoristaFirstAccess')}>
+                            onPress={() => navigation.navigate('MotoristaFirstAccessQuestionario')}>
                             Acessar
                         </Button>
                         <Title style={[{ marginTop: 20 }, styles.title]}>Segundo acesso:</Title>

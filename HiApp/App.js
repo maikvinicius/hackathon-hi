@@ -11,6 +11,8 @@ import MotoristaHomeScreen from './src/screens/MotoristaHomeScreen';
 import MotoristaTratamentoScreen from './src/screens/MotoristaTratamentoScreen';
 import MotoristaComoAtendimentoScreen from './src/screens/MotoristaComoAtendimentoScreen';
 import MotoristaAgendaSucessoScreen from './src/screens/MotoristaAgendaSucessoScreen';
+import MotoristaTratamentoDetalhes from './src/screens/MotoristaTratamentoDetalhes';
+import MotoristaFirstAccessQuestionario from './src/screens/MotoristaFirstAccessQuestionario';
 
 const Stack = createStackNavigator();
 
@@ -26,6 +28,8 @@ export default function App() {
         <Stack.Screen options={{ headerShown: false }} name="MotoristaTratamentoScreen" component={MotoristaTratamentoScreen} />
         <Stack.Screen options={{ headerShown: false }} name="MotoristaComoAtendimentoScreen" component={MotoristaComoAtendimentoScreen} />
         <Stack.Screen options={{ headerShown: false }} name="MotoristaAgendaSucessoScreen" component={MotoristaAgendaSucessoScreen} />
+        <Stack.Screen options={{ headerShown: false }} name="MotoristaTratamentoDetalhes" component={MotoristaTratamentoDetalhes} />
+        <Stack.Screen options={{ headerShown: false }} name="MotoristaFirstAccessQuestionario" component={MotoristaFirstAccessQuestionario} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -28,35 +28,35 @@ const MotoristaTratamentoScreen = (props) => {
             <ImageBackground source={background} style={styles.image}>
                 <View style={styles.boxButton}>
                     <ScrollView style={{ width: '100%' }}>
-                        <Card style={styles.card} >
+                        <Card style={styles.card} onPress={() => navigation.navigate('MotoristaTratamentoDetalhes')}>
                             <Card.Cover source={treinamento} />
                             <Card.Title title="Como se ajustar no volante" subtitle="Super dicas com nosso fisioterapeuta Dr. Maik Vinicius" />
                         </Card>
-                        <Card style={styles.card}>
+                        <Card style={styles.card} onPress={() => navigation.navigate('MotoristaTratamentoDetalhes')}>
                             <Card.Cover source={treinamento} />
                             <Card.Title title="Como se ajustar no volante" subtitle="Super dicas com nosso fisioterapeuta Dr. Maik Vinicius" />
                         </Card>
-                        <Card style={styles.card}>
+                        <Card style={styles.card} onPress={() => navigation.navigate('MotoristaTratamentoDetalhes')}>
                             <Card.Cover source={treinamento} />
                             <Card.Title title="Como se ajustar no volante" subtitle="Super dicas com nosso fisioterapeuta Dr. Maik Vinicius" />
                         </Card>
-                        <Card style={styles.card}>
+                        <Card style={styles.card} onPress={() => navigation.navigate('MotoristaTratamentoDetalhes')}>
                             <Card.Cover source={treinamento} />
                             <Card.Title title="Como se ajustar no volante" subtitle="Super dicas com nosso fisioterapeuta Dr. Maik Vinicius" />
                         </Card>
-                        <Card style={styles.card}>
+                        <Card style={styles.card} onPress={() => navigation.navigate('MotoristaTratamentoDetalhes')}>
                             <Card.Cover source={treinamento} />
                             <Card.Title title="Como se ajustar no volante" subtitle="Super dicas com nosso fisioterapeuta Dr. Maik Vinicius" />
                         </Card>
-                        <Card style={styles.card}>
+                        <Card style={styles.card} onPress={() => navigation.navigate('MotoristaTratamentoDetalhes')}>
                             <Card.Cover source={treinamento} />
                             <Card.Title title="Como se ajustar no volante" subtitle="Super dicas com nosso fisioterapeuta Dr. Maik Vinicius" />
                         </Card>
-                        <Card style={styles.card}>
+                        <Card style={styles.card} onPress={() => navigation.navigate('MotoristaTratamentoDetalhes')}>
                             <Card.Cover source={treinamento} />
                             <Card.Title title="Como se ajustar no volante" subtitle="Super dicas com nosso fisioterapeuta Dr. Maik Vinicius" />
                         </Card>
-                        <Card style={styles.card}>
+                        <Card style={styles.card} onPress={() => navigation.navigate('MotoristaTratamentoDetalhes')}>
                             <Card.Cover source={treinamento} />
                             <Card.Title title="Como se ajustar no volante" subtitle="Super dicas com nosso fisioterapeuta Dr. Maik Vinicius" />
                         </Card>
