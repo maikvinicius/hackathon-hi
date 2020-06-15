@@ -3,8 +3,7 @@ import {
     View,
     SafeAreaView,
     StyleSheet,
-    ImageBackground,
-    TouchableHighlight
+    ImageBackground
 } from 'react-native';
 import {
     Title,
@@ -20,38 +19,32 @@ const MotoristaHomeScreen = (props) => {
 
     const { navigation } = props;
 
-    const today = new Date();
-
-    function makeTwoDigits(time) {
-        const timeString = `${time}`;
-        if (timeString.length === 2) return time
-        return `0${time}`
-    }
-
     return (
         <SafeAreaView style={styles.container}>
             <ImageBackground source={background} style={styles.image}>
-                <TouchableHighlight onPress={() => navigation.navigate('MotoristaAgendaSucessoScreen')}>
-                    <View style={styles.boxAvatar}>
-                        <Avatar.Image size={54} source={maik} />
-                        <View>
-                            <Title style={styles.title}>Dr. Maik Vinícius</Title>
-                            <Subheading style={styles.title}>Especialista em Terapia</Subheading>
-                        </View>
+                <View style={styles.boxAvatar}>
+                    <View style={{ marginLeft: 20 }}>
+                        <Title style={styles.title}>Seja bem-vinda CCR</Title>
                     </View>
-                </TouchableHighlight>
+                </View>
                 <View style={styles.boxButton}>
-                    <Title style={styles.title}>Parabéns!</Title>
-                    <Subheading style={styles.title}>Agendado com sucesso!</Subheading>
-                    <Subheading style={[{ marginBottom: 20 }, styles.title]}>{`${makeTwoDigits(today.getDate())}/${makeTwoDigits(parseInt(today.getMonth() + 1))}/${today.getFullYear()} ${makeTwoDigits(today.getHours())}:${makeTwoDigits(today.getMinutes())}`}</Subheading>
                     <Button
                         theme={{ colors: { primary: '#FFF' } }}
-                        icon="contacts"
+                        icon="chart-pie"
                         mode="outlined"
                         style={styles.button}
                         labelStyle={styles.label}
-                        onPress={() => navigation.navigate('MotoristaTeleAtendimentoScreen')}>
-                        Falar com Fisioterapeuta
+                        onPress={() => navigation.navigate('MetricasScreen')}>
+                        Métricas
+                    </Button>
+                    <Button
+                        theme={{ colors: { primary: '#FFF' } }}
+                        icon="arrow-left"
+                        mode="outlined"
+                        style={styles.button}
+                        labelStyle={styles.label}
+                        onPress={() => navigation.navigate('MainScreen')}>
+                        Sair
                     </Button>
                 </View>
             </ImageBackground>

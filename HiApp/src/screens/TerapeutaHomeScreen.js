@@ -3,8 +3,7 @@ import {
     View,
     SafeAreaView,
     StyleSheet,
-    ImageBackground,
-    Linking
+    ImageBackground
 } from 'react-native';
 import {
     Title,
@@ -14,7 +13,7 @@ import {
 } from 'react-native-paper';
 
 import background from '../assets/imgs/background.png'
-import maik from '../assets/imgs/vinicius.jpg'
+import maik from '../assets/imgs/avatar.jpg'
 
 const MotoristaHomeScreen = (props) => {
 
@@ -23,15 +22,22 @@ const MotoristaHomeScreen = (props) => {
     return (
         <SafeAreaView style={styles.container}>
             <ImageBackground source={background} style={styles.image}>
+                <View style={styles.boxAvatar}>
+                    <Avatar.Image size={54} source={maik} />
+                    <View style={{ marginLeft: 20 }}>
+                        <Title style={styles.title}>Dr Maik Vinicius</Title>
+                        <Subheading style={styles.title}>Editar perfil</Subheading>
+                    </View>
+                </View>
                 <View style={styles.boxButton}>
                     <Button
                         theme={{ colors: { primary: '#FFF' } }}
-                        icon="whatsapp"
+                        icon="calendar"
                         mode="outlined"
                         style={styles.button}
                         labelStyle={styles.label}
-                        onPress={() => Linking.openURL('https://wa.me/5512988333250?text=Ol%C3%A1%20gostaria%20de%20conversar%20com%20voc%C3%AA!')}>
-                        Conversar via chat
+                        onPress={() => navigation.navigate('TerapeutaAgendaScreen')}>
+                        Consultar agenda
                     </Button>
                     <Button
                         theme={{ colors: { primary: '#FFF' } }}
@@ -39,8 +45,17 @@ const MotoristaHomeScreen = (props) => {
                         mode="outlined"
                         style={styles.button}
                         labelStyle={styles.label}
-                        onPress={() => navigation.navigate('MotoristaFirstAccess', { isSecond: true })}>
-                        Agendar Tele Atendimento
+                        onPress={() => navigation.navigate('TerapeutaTeleAtendimentoScreen')}>
+                        Realizar tele atendimento
+                    </Button>
+                    <Button
+                        theme={{ colors: { primary: '#FFF' } }}
+                        icon="clipboard"
+                        mode="outlined"
+                        style={styles.button}
+                        labelStyle={styles.label}
+                        onPress={() => navigation.navigate('ProntuarioScreen')}>
+                        Exibir prontuário
                     </Button>
                     <Button
                         theme={{ colors: { primary: '#FFF' } }}
@@ -48,8 +63,8 @@ const MotoristaHomeScreen = (props) => {
                         mode="outlined"
                         style={styles.button}
                         labelStyle={styles.label}
-                        onPress={() => navigation.goBack()}>
-                        Voltar
+                        onPress={() => navigation.navigate('MainScreen')}>
+                        Sair
                     </Button>
                 </View>
             </ImageBackground>

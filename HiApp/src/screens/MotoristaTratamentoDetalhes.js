@@ -4,7 +4,8 @@ import {
     SafeAreaView,
     StyleSheet,
     ImageBackground,
-    ScrollView
+    ScrollView,
+    Image
 } from 'react-native';
 import {
     Appbar,
@@ -17,7 +18,15 @@ import { WebView } from 'react-native-webview';
 
 import background from '../assets/imgs/background.png'
 import maik from '../assets/imgs/vinicius.jpg'
-import treinamento from '../assets/imgs/treinamento.jpg'
+import exercicio_1 from '../assets/imgs/exercicio_1.png'
+import exercicio_2 from '../assets/imgs/exercicio_2.png'
+import exercicio_3 from '../assets/imgs/exercicio_3.png'
+import exercicio_4 from '../assets/imgs/exercicio_4.png'
+import exercicio_5 from '../assets/imgs/exercicio_5.png'
+import exercicio_6 from '../assets/imgs/exercicio_6.png'
+import exercicio_7 from '../assets/imgs/exercicio_7.png'
+import exercicio_8 from '../assets/imgs/exercicio_8.png'
+import exercicio_9 from '../assets/imgs/exercicio_9.png'
 
 const MotoristaTratamentoScreen = (props) => {
 
@@ -37,8 +46,16 @@ const MotoristaTratamentoScreen = (props) => {
                             javaScriptEnabled={true}
                             source={{ uri: 'https://www.youtube.com/embed/WOxicVnr8Bk?rel=0&autoplay=0&showinfo=0&controls=0' }}
                         />
-                        <Title style={styles.title}>Como se ajustar no volante</Title>
-                        <Subheading style={styles.title}>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam at ligula quis mauris imperdiet condimentum. Ut molestie erat eros, quis volutpat lectus laoreet in. Duis magna metus, porttitor sit amet leo viverra, rutrum suscipit velit. Praesent nec varius orci. Nulla a lorem commodo, venenatis nunc a, hendrerit nisi. Sed lobortis augue blandit risus commodo pretium. Pellentesque eget bibendum lectus, ac varius urna. In varius lorem eu nulla euismod vehicula. Praesent imperdiet turpis in arcu egestas, non aliquam sapien sagittis. Mauris accumsan elementum ipsum vel maximus. Sed non est lectus. In hac habitasse platea dictumst. Donec euismod elit et velit lobortis fringilla. Sed bibendum, lacus nec convallis dignissim, ante lacus faucibus sem, sed mollis leo purus ac nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Subheading>
+                        <Title style={[{ marginTop: 20 }, styles.title]}>Exercícios:</Title>
+                        <Image style={styles.treinamento} source={exercicio_1} />
+                        <Image style={styles.treinamento} source={exercicio_2} />
+                        <Image style={styles.treinamento} source={exercicio_3} />
+                        <Image style={styles.treinamento} source={exercicio_4} />
+                        <Image style={styles.treinamento} source={exercicio_5} />
+                        <Image style={styles.treinamento} source={exercicio_6} />
+                        <Image style={styles.treinamento} source={exercicio_7} />
+                        <Image style={styles.treinamento} source={exercicio_8} />
+                        <Image style={styles.treinamento} source={exercicio_9} />
                     </ScrollView>
                 </View>
             </ImageBackground>
@@ -47,6 +64,11 @@ const MotoristaTratamentoScreen = (props) => {
 }
 
 const styles = StyleSheet.create({
+    treinamento: {
+        width: '100%',
+        height: 200,
+        marginBottom: 20
+    },
     container: {
         flex: 1,
     },

@@ -23,6 +23,8 @@ import {
 import background from '../assets/imgs/background.png'
 
 import maik from '../assets/imgs/avatar.jpg'
+import mario from '../assets/imgs/mario.jpeg'
+import carlos from '../assets/imgs/carlos.jpeg'
 
 const ScreenHeight = Dimensions.get("window").height;
 
@@ -62,18 +64,18 @@ const MotoristaFirstAccess = (props) => {
                   </TouchableHighlight>
                   <TouchableHighlight onPress={() => navigation.navigate('MotoristaAgendaSucessoScreen')}>
                     <View style={styles.boxAvatar}>
-                      <Avatar.Image size={54} source={maik} />
+                      <Avatar.Image size={54} source={mario} />
                       <View>
-                        <Title style={styles.title}>Dr. Maik Vinícius</Title>
+                        <Title style={styles.title}>Dr. Mario Celsinho</Title>
                         <Subheading style={styles.title}>Especialista em Terapia</Subheading>
                       </View>
                     </View>
                   </TouchableHighlight>
                   <TouchableHighlight onPress={() => navigation.navigate('MotoristaAgendaSucessoScreen')}>
                     <View style={styles.boxAvatar}>
-                      <Avatar.Image size={54} source={maik} />
+                      <Avatar.Image size={54} source={carlos} />
                       <View>
-                        <Title style={styles.title}>Dr. Maik Vinícius</Title>
+                        <Title style={styles.title}>Dr. Carlos Henrique</Title>
                         <Subheading style={styles.title}>Especialista em Terapia</Subheading>
                       </View>
                     </View>

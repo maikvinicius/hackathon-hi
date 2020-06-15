@@ -22,6 +22,7 @@ const MainScreen = (props) => {
                 <View style={styles.boxButton}>
                     <Title style={styles.title}>Como você deseja acessar?</Title>
                     <Button
+                        theme={{ colors: { primary: '#FFF' } }}
                         icon="truck"
                         mode="outlined"
                         style={styles.button}
@@ -30,19 +31,21 @@ const MainScreen = (props) => {
                         Motorista
                     </Button>
                     <Button
+                        theme={{ colors: { primary: '#FFF' } }}
                         icon="clipboard-plus"
                         mode="outlined"
                         style={styles.button}
                         labelStyle={styles.label}
-                        onPress={() => navigation.navigate('LoginScreen')}>
+                        onPress={() => navigation.navigate('TerapeutaLoginScreen')}>
                         Fisioterapeuta
                     </Button>
                     <Button
+                        theme={{ colors: { primary: '#FFF' } }}
                         icon="charity"
                         mode="outlined"
                         style={styles.button}
                         labelStyle={styles.label}
-                        onPress={() => navigation.navigate('LoginScreen')}>
+                        onPress={() => navigation.navigate('CCRLoginScreen')}>
                         CCR
                     </Button>
                 </View>

@@ -26,7 +26,7 @@ import maik from '../assets/imgs/avatar.jpg'
 
 const ScreenHeight = Dimensions.get("window").height / 2;
 
-const MotoristaFirstAccessQuestionario = (props) => {
+const MotoristaTeleAtendimentoScreen = (props) => {
 
     const { navigation } = props;
 
@@ -34,7 +34,7 @@ const MotoristaFirstAccessQuestionario = (props) => {
         <ScrollView style={{ width: '100%' }}>
             <SafeAreaView style={styles.container}>
                 <WebView
-                    source={{ uri: 'https://combinativa.typeform.com/to/nMhBwy' }}
+                    source={{ uri: 'https://teste-hi.herokuapp.com/room/hi+10caracteres' }}
                     style={styles.webview} />
                 <ImageBackground source={background} style={styles.image}>
                     <Button
@@ -42,8 +42,8 @@ const MotoristaFirstAccessQuestionario = (props) => {
                         mode="outlined"
                         style={styles.button}
                         labelStyle={styles.label}
-                        onPress={() => navigation.navigate('MotoristaFirstAccess')}>
-                        Completei cadastro
+                        onPress={() => navigation.navigate('TerapeutaHomeScreen')}>
+                        Finalizar atendimento
                     </Button>
                 </ImageBackground>
             </SafeAreaView>
@@ -81,11 +81,11 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     button: {
-        backgroundColor: 'green'
+        backgroundColor: 'red'
     },
     label: {
         color: '#FFF'
     }
 });
 
-export default MotoristaFirstAccessQuestionario;
+export default MotoristaTeleAtendimentoScreen;

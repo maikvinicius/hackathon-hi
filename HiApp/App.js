@@ -13,6 +13,15 @@ import MotoristaComoAtendimentoScreen from './src/screens/MotoristaComoAtendimen
 import MotoristaAgendaSucessoScreen from './src/screens/MotoristaAgendaSucessoScreen';
 import MotoristaTratamentoDetalhes from './src/screens/MotoristaTratamentoDetalhes';
 import MotoristaFirstAccessQuestionario from './src/screens/MotoristaFirstAccessQuestionario';
+import TerapeutaHomeScreen from './src/screens/TerapeutaHomeScreen';
+import TerapeutaLoginScreen from './src/screens/TerapeutaLoginScreen';
+import TerapeutaTeleAtendimentoScreen from './src/screens/TerapeutaTeleAtendimentoScreen';
+import TerapeutaAgendaScreen from './src/screens/TerapeutaAgendaScreen';
+import ProntuarioScreen from './src/screens/ProntuarioScreen';
+import ProntuarioDetalhesScreen from './src/screens/ProntuarioDetalhesScreen';
+import CCRLoginScreen from './src/screens/CCRLoginScreen';
+import CCRHomeScreen from './src/screens/CCRHomeScreen';
+import MetricasScreen from './src/screens/MetricasScreen';
 
 const Stack = createStackNavigator();
 
@@ -30,6 +39,15 @@ export default function App() {
         <Stack.Screen options={{ headerShown: false }} name="MotoristaAgendaSucessoScreen" component={MotoristaAgendaSucessoScreen} />
         <Stack.Screen options={{ headerShown: false }} name="MotoristaTratamentoDetalhes" component={MotoristaTratamentoDetalhes} />
         <Stack.Screen options={{ headerShown: false }} name="MotoristaFirstAccessQuestionario" component={MotoristaFirstAccessQuestionario} />
+        <Stack.Screen options={{ headerShown: false }} name="TerapeutaHomeScreen" component={TerapeutaHomeScreen} />
+        <Stack.Screen options={{ headerShown: false }} name="TerapeutaLoginScreen" component={TerapeutaLoginScreen} />
+        <Stack.Screen options={{ headerShown: false }} name="TerapeutaTeleAtendimentoScreen" component={TerapeutaTeleAtendimentoScreen} />
+        <Stack.Screen options={{ headerShown: false }} name="TerapeutaAgendaScreen" component={TerapeutaAgendaScreen} />
+        <Stack.Screen options={{ headerShown: false }} name="ProntuarioScreen" component={ProntuarioScreen} />
+        <Stack.Screen options={{ headerShown: false }} name="ProntuarioDetalhesScreen" component={ProntuarioDetalhesScreen} />
+        <Stack.Screen options={{ headerShown: false }} name="CCRLoginScreen" component={CCRLoginScreen} />
+        <Stack.Screen options={{ headerShown: false }} name="CCRHomeScreen" component={CCRHomeScreen} />
+        <Stack.Screen options={{ headerShown: false }} name="MetricasScreen" component={MetricasScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

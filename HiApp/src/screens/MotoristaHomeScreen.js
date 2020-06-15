@@ -31,6 +31,7 @@ const MotoristaHomeScreen = (props) => {
                 </View>
                 <View style={styles.boxButton}>
                     <Button
+                        theme={{ colors: { primary: '#FFF' } }}
                         icon="television-play"
                         mode="outlined"
                         style={styles.button}
@@ -39,6 +40,7 @@ const MotoristaHomeScreen = (props) => {
                         Meus tratamentos
                     </Button>
                     <Button
+                        theme={{ colors: { primary: '#FFF' } }}
                         icon="contacts"
                         mode="outlined"
                         style={styles.button}
@@ -47,6 +49,7 @@ const MotoristaHomeScreen = (props) => {
                         Falar com Fisioterapeuta
                     </Button>
                     <Button
+                        theme={{ colors: { primary: '#FFF' } }}
                         icon="arrow-left"
                         mode="outlined"
                         style={styles.button}

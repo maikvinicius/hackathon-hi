@@ -38,6 +38,7 @@ const MotoristaTeleAtendimentoScreen = (props) => {
                     style={styles.webview} />
                 <ImageBackground source={background} style={styles.image}>
                     <Button
+                        theme={{ colors: { primary: '#FFF' } }}
                         mode="outlined"
                         style={styles.button}
                         labelStyle={styles.label}
