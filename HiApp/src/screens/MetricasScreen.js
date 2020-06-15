@@ -7,7 +7,8 @@ import {
   ImageBackground,
   ScrollView,
   TouchableHighlight,
-  Dimensions
+  Dimensions,
+  Image
 } from 'react-native';
 
 import {
@@ -22,6 +23,8 @@ import {
 } from 'react-native-paper';
 
 import background from '../assets/imgs/background.png'
+import metrica_1 from '../assets/imgs/metrica_1.jpeg'
+import metrica_2 from '../assets/imgs/metrica_2.jpeg'
 
 const ScreenHeight = Dimensions.get("window").height;
 
@@ -52,6 +55,9 @@ const MotoristaFirstAccess = (props) => {
         </Appbar.Header>
         <ImageBackground source={background} style={[{ height: ScreenHeight }, styles.image]}>
           <View style={styles.boxButton}>
+            <Title style={styles.title}>Região do corpo mais acometida</Title>
+            <Image style={styles.metrica} source={metrica_1} />
+            <Image style={styles.metrica} source={metrica_2} />
           </View>
         </ImageBackground>
       </SafeAreaView>
@@ -60,8 +66,14 @@ const MotoristaFirstAccess = (props) => {
 }
 
 const styles = StyleSheet.create({
+  metrica: {
+    width: '100%',
+    height: 200,
+    marginBottom: 20,
+    resizeMode: 'contain'
+  },
   text: {
-    color: '#FFF'
+    color: '#FFF',
   },
   calendar: {
     width: '100%',
@@ -70,8 +82,10 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   title: {
-    marginLeft: 20,
-    color: '#FFF'
+    color: '#FFF',
+    width: '100%',
+    textAlign: 'center',
+    marginBottom: 20
   },
   image: {
     flex: 1,
